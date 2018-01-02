@@ -117,12 +117,12 @@ public class PESDKModule extends ReactContextBaseJavaModule {
                 .setImageSourcePath(imagePath)
                 .getSettingsModel(EditorSaveSettings.class)
                 // TODO: Make export directory configurable
-                .setExportDir(Directory.DCIM, "PESDK")
-                .setExportPrefix("PESDK_")
+                .setOutputFilePath(imagePath.replace("edited_", "").replace(name, "edited_" + name))
+//                .setExportDir(Directory.DCIM, "PESDK")
+//                .setExportPrefix("PESDK_")
                 .setSavePolicy(
                         EditorSaveSettings.SavePolicy.RETURN_ALWAYS_ONLY_OUTPUT
                 );
-
 
 
                 // TODO: Config options in PESDK v5 are limited compared to iOS (or I didn't find them)
